@@ -22,7 +22,9 @@
       "Bash(rm:*)",
       "Bash(rmdir:*)",
       "Bash(go run:*)",
-      "Bash(go help:*)"
+      "Bash(go help:*)",
+      "Bash(sed:*)",
+      "Bash(go build:*)"
     ],
     "deny": [],
     "ask": []

@@ -31,7 +31,7 @@ Then [Expected result]
 ```
 #### Example Command
 ```bash  [Full example of command need to be provided]
-./bin/flow-test-go execute tests/e2e/testdata/flows/integration-flows github-get-issue.json --log-level debug
+./bin/mono-track execute tests/e2e/testdata/flows/integration-flows github-get-issue.json --log-level debug
 ```
 Expected output
 ####

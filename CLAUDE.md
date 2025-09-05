@@ -10,13 +10,17 @@ This is `mono-track`, a Go-based CLI application for tracking and analyzing expe
 
 ### Build and Run
 - `go run main.go` - Run the application directly
-- `go build -o bin/mono-track main.go` - Build binary to bin/mono-track
-- `./bin/mono-track` or `mono-track` - Run the built binary
+- `make build` - Build binary to bin/mono-track using Makefile
+- `go build -o bin/mono-track .` - Build binary directly
+- `./bin/mono-track` - Run the built binary
 
 ### Testing
-- `go test ./...` - Run all tests
-- `go test ./tests/e2e/...` - Run end-to-end tests specifically
-- `make build-e2e-coverage` - Build test binary with coverage (referenced in test code but Makefile not present)
+- `make test-unit` - Run unit tests only
+- `make coverage-unit` - Run unit tests with coverage
+- `make test-e2e` - Run end-to-end tests (builds coverage binary first)
+- `make coverage-e2e` - Run e2e tests with coverage reporting
+- `make build-e2e-coverage` - Build test binary with coverage instrumentation
+- `make clean` - Clean build files and coverage data
 
 ### Application Commands
 - `mono-track` - Run main expense tracking flow (currently placeholder)
@@ -36,10 +40,10 @@ The project has a sophisticated end-to-end testing framework in `tests/e2e/testu
 - **FlowTestBuilder**: Fluent API for building flow execution tests with configurable timeouts, environment variables, and expectations
 - **FlowRunner**: Handles subprocess execution with coverage collection and security validations
 - **Test Organization**: Uses coverage tracking with `GOCOVERDIR` environment variable
-- **Binary Management**: Automatically builds test binaries when needed (`bin/flow-test-go-e2e`)
+- **Binary Management**: Automatically builds test binaries when needed (`bin/mono-track-e2e`)
 
 ### Key Test Patterns
-- Tests expect a test binary at `bin/flow-test-go-e2e`
+- Tests expect a test binary at `bin/mono-track-e2e`
 - Coverage data collected in `coverage/e2e/` directory
 - Uses builder pattern for test configuration: `NewFlowTest(t).WithCommand("list").ExpectSuccess().Run()`
 - Supports both flow file execution and direct command testing

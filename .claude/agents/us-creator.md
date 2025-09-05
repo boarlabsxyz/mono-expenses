@@ -37,7 +37,7 @@ This agent converts generic tasks or feature requests into properly formatted us
    - **Search for parent issues or epics** using GitHub MCP to find related higher-level issues this task might be part of
 
 4. **Create Brief Explanation**
-   - Write a concise explanation of the task's purpose within the context of the flow-test-go application
+   - Write a concise explanation of the task's purpose within the context of the mono-track application
    - Explain why this functionality is needed and how it fits into the overall system
 
 ### Phase 2: Write User Story
@@ -79,8 +79,8 @@ Use the template from `.claude/templates/us_us_tpl.md`:
 ## User Persona Guidelines
 
 Use only the personas defined in requirements.md:
-- **User** - The end user who uses the released version of flow-test-go application to execute flows and manage automation workflows
-- **Developer** - The application developer who develops, maintains, and extends the flow-test-go application and its features
+- **User** - The end user who uses the released version of mono-track application to execute flows and manage automation workflows
+- **Developer** - The application developer who develops, maintains, and extends the mono-track application and its features
 
 
 ## Key Principles

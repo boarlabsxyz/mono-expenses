@@ -26,7 +26,7 @@ const (
 	coverageDirMode      = 0o750
 )
 
-// FlowRunner handles subprocess execution of flow-test-go binary.
+// FlowRunner handles subprocess execution of mono-track binary.
 type FlowRunner struct {
 	t           *testing.T
 	flowFile    string
@@ -72,7 +72,7 @@ func NewFlowRunner(t *testing.T) *FlowRunner {
 	t.Helper()
 
 	projectRoot := findProjectRoot(t)
-	binaryPath := filepath.Join(projectRoot, "bin", "flow-test-go-e2e")
+	binaryPath := filepath.Join(projectRoot, "bin", "mono-track-e2e")
 
 	return &FlowRunner{
 		t:           t,
@@ -222,7 +222,7 @@ func EnsureBinaryExists(t *testing.T) {
 	t.Helper()
 
 	projectRoot := findProjectRoot(t)
-	binaryPath := filepath.Join(projectRoot, "bin", "flow-test-go-e2e")
+	binaryPath := filepath.Join(projectRoot, "bin", "mono-track-e2e")
 
 	// Check if binary exists
 	_, err := os.Stat(binaryPath)
