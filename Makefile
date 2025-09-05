@@ -2,13 +2,13 @@
 .PHONY: build
 build:
 	@mkdir -p bin
-	go build -o bin/mono-track .
+	go build -o bin/mono-track ./src
 
 # Run unit tests only (excluding e2e tests)
 .PHONY: test-unit
 test-unit:
 	@mkdir -p coverage
-	go test -v -json . > coverage/unit-tests.json
+	go test -v -json ./src > coverage/unit-tests.json
 	@go run ./scripts/gotestdox-json/main.go coverage/unit-tests.json
 
 # Run unit tests with coverage (excluding e2e tests)
@@ -16,7 +16,7 @@ test-unit:
 coverage-unit:
 	@mkdir -p coverage
 	@echo "Running unit tests with coverage..."
-	go test -v -json -coverprofile=coverage/unit.out . > coverage/unit-tests.json
+	go test -v -json -coverprofile=coverage/unit.out ./src > coverage/unit-tests.json
 	@go run ./scripts/gotestdox-json/main.go coverage/unit-tests.json
 	@echo ""
 	@echo "Coverage Report by File:"
@@ -26,7 +26,7 @@ coverage-unit:
 .PHONY: build-e2e-coverage
 build-e2e-coverage:
 	@mkdir -p bin
-	go build -cover -covermode=set -coverpkg=./... -o bin/mono-track-e2e .
+	go build -cover -covermode=set -coverpkg=./... -o bin/mono-track-e2e ./src
 
 # Run e2e tests
 .PHONY: test-e2e

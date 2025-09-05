@@ -24,7 +24,8 @@
       "Bash(go run:*)",
       "Bash(go help:*)",
       "Bash(sed:*)",
-      "Bash(go build:*)"
+      "Bash(go build:*)",
+      "Bash(./bin/mono-track:*)"
     ],
     "deny": [],
     "ask": []

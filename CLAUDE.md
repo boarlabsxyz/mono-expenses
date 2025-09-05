@@ -9,9 +9,9 @@ This is `mono-track`, a Go-based CLI application for tracking and analyzing expe
 ## Commands
 
 ### Build and Run
-- `go run main.go` - Run the application directly
+- `go run src/main.go` - Run the application directly
 - `make build` - Build binary to bin/mono-track using Makefile
-- `go build -o bin/mono-track .` - Build binary directly
+- `go build -o bin/mono-track ./src` - Build binary directly
 - `./bin/mono-track` - Run the built binary
 
 ### Testing
@@ -30,7 +30,7 @@ This is `mono-track`, a Go-based CLI application for tracking and analyzing expe
 ## Architecture
 
 ### Core Structure
-- **main.go**: Entry point with basic CLI command routing (help, version, main flow)
+- **src/main.go**: Entry point with basic CLI command routing (help, version, main flow)
 - **Module**: `mono-track` (Go 1.25.0)
 - **Version**: Currently hardcoded as "1.0.0" in main.go
 
