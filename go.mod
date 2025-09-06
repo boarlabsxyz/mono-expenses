@@ -1,4 +1,4 @@
-module mono-track
+module mono-expenses
 
 go 1.25.0
 

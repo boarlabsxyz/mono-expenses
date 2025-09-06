@@ -186,7 +186,7 @@ This is a CLI-only product. All Acceptance Criteria MUST map to executable Bash 
     - Example: `Given environment variable GITHUB_TOKEN is valid token"`
   - When:
     - A single action. Provide the exact command invocation and working directory if not repo root.
-    - Example: `When I run "mono-track tools list"`
+    - Example: `When I run "mono-expenses tools list"`
   - Then:
     - Deterministic assertions. Include all that apply, stated explicitly:
       - Exit code (e.g., `Then the exit code is 0`).
@@ -212,7 +212,7 @@ Scenario: Listing available tools prints exact list and exits with code 0
 Given environment variable GITHUB_TOKEN is a valid GitHub token
 When I run:
 """
-mono-track tools ./tests/e2e/testdata/flows/error-cases/single-step.json
+mono-expenses tools ./tests/e2e/testdata/flows/error-cases/single-step.json
 """
 Then the exit code is 0
 And stdout equals:
@@ -229,7 +229,7 @@ Scenario: Executing GitHub step prints issue title and writes file
 Given environment variable GITHUB_TOKEN is a valid GitHub token
 When I run:
 """
-mono-track execute ./tests/e2e/testdata/flows/error-cases/github-step.json
+mono-expenses execute ./tests/e2e/testdata/flows/error-cases/github-step.json
 """
 Then the exit code is 0
 And stdout equals:
@@ -246,7 +246,7 @@ Scenario Outline: <matrixed behavior>
 Given environment variable GITHUB_TOKEN is valid github token
 When I run:
 """
-mono-track <SUBCOMMAND> <FLAGS>
+mono-expenses <SUBCOMMAND> <FLAGS>
 """
 Then the exit code is <EXIT_CODE>
 And stdout <MATCH_POLICY>:

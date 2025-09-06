@@ -2,7 +2,7 @@
 .PHONY: build
 build:
 	@mkdir -p bin
-	go build -o bin/mono-track ./src
+	go build -o bin/mono-expenses ./src
 
 # Run unit tests only (excluding e2e tests)
 .PHONY: test-unit
@@ -26,7 +26,7 @@ coverage-unit:
 .PHONY: build-e2e-coverage
 build-e2e-coverage:
 	@mkdir -p bin
-	go build -cover -covermode=set -coverpkg=./... -o bin/mono-track-e2e ./src
+	go build -cover -covermode=set -coverpkg=./... -o bin/mono-expenses-e2e ./src
 
 # Run e2e tests
 .PHONY: test-e2e
