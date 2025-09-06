@@ -1,0 +1,33 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__github__get_issue",
+      "mcp__github__get_me",
+      "mcp__github__update_issue",
+      "mcp__github__search_issues",
+      "mcp__github__list_issues",
+      "mcp__github__search_repositories",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git --no-pager status)",
+      "Bash(git --no-pager diff:*)",
+      "Bash(git push:*)",
+      "Bash(git remote get-url:*)",
+      "Bash(git --no-pager log --oneline:*)",
+      "Bash(golangci-lint run:*)",
+      "Bash(make:*)",
+      "Bash(pre-commit run:*)",
+      "Bash(find:*)",
+      "Bash(mkdir:*)",
+      "Bash(rm:*)",
+      "Bash(rmdir:*)",
+      "Bash(go run:*)",
+      "Bash(go help:*)",
+      "Bash(sed:*)",
+      "Bash(go build:*)",
+      "Bash(./bin/mono-expenses:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

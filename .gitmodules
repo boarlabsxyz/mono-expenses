@@ -1,3 +1,0 @@
-[submodule ".cursor/rules/common"]
-	path = .cursor/rules/common
-	url = git@github.com:speedandfunction/cursor-ai.git
